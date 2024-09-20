@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: my_mariadb_shopping_list
+    environment:
+      MYSQL_ROOT_PASSWORD: "shopping"
+      MYSQL_DATABASE: "shopping"
+      MYSQL_USER: "shopping"
+      MYSQL_PASSWORD: "shopping"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mariadb_data:/var/lib/mysql
